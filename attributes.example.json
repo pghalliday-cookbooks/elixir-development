@@ -1,0 +1,10 @@
+{
+  "elixir_development": {
+    "user": "username",
+    "group": "groupname",
+    "home": "/home/username"
+  },
+  "run_list": [
+    "recipe[elixir_development::default]"
+  ]
+}
