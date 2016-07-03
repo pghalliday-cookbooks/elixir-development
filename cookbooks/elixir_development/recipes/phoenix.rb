@@ -1,6 +1,8 @@
 login_user = node['elixir_development']['user']
 login_home = node['elixir_development']['home']
 
+package 'inotify-tools'
+
 bash 'install_phoenix' do
   code <<-EOH
   export HOME=#{login_home}
