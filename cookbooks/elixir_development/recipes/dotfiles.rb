@@ -35,13 +35,21 @@ directory dotfiles_dir do
   group login_group
 end
 
+# get latest git
+apt_repository 'git' do
+  uri 'ppa:git-core/ppa'
+  distribution node['lsb']['codename']
+end
+
 %w{
 openssh-server
 git
 vim
 tmux
 }.each do |name|
-  package name
+  package name do
+    action :upgrade
+  end
 end
 
 bash 'dotfiles' do
