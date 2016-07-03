@@ -47,6 +47,7 @@ end
 bash 'dotfiles' do
   code <<-EOH
   export HOME=#{login_home}
+  ssh-keyscan -t rsa github.com >> #{ssh_dir}/known_hosts
   git clone git@github.com:pghalliday-dotfiles/scripts.git #{dotfiles_scripts_dir}
   cd #{dotfiles_scripts_dir}
   ./terminal-setup.sh
