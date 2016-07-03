@@ -1,11 +1,10 @@
 %w{
-postgresql
-postgresql-contrib
+mysql-server
 }.each do |name|
   package name
 end
 
-service 'postgresql' do
+service 'mysql' do
   supports :status => true, :restart => true, :reload => false
   action [ :enable, :start ]
 end
