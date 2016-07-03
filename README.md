@@ -1,5 +1,18 @@
 # elixir-development
 
+As root
+
+```
+sudo su -
+```
+
+Clone recursively
+
+```
+git clone --recursive https://github.com/pghalliday-cookbooks/elixir-development.git
+cd elixir-development
+```
+
 Copy and edit attributes.json
 
 ```
